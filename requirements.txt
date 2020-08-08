@@ -7,3 +7,4 @@ Flask_Script==2.0.6
 beautifulsoup4==4.9.1
 twilio==6.44.2
 webdriver_manager==3.2.1
+gunicorn
