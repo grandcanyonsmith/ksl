@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'a really really really really long secret key'
 
 @app.route('/insert/', methods=['get', 'post'])
+
 def insert():
     form = ItemInsertForm()
     if form.validate_on_submit():
@@ -38,7 +39,6 @@ def insert():
             print ("Duplicate Item")
             
         return redirect(url_for('insert'))
-
     return render_template('item.html', form=form)
 
 @app.route('/delete/', methods=['get', 'post'])
@@ -71,7 +71,9 @@ def delete():
         return redirect(url_for('delete'))
 
     return render_template('item.html', form=form)
-
+@app.route('/')
+def hello_world():
+    return render_template('main.html')
 if __name__ == "__main__":
-    app.run()
+    app.run(debug = True)
 
