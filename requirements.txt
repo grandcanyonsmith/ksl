@@ -29,9 +29,6 @@ Bottleneck==1.2.1
 bs4==0.0.1
 cachetools==4.0.0
 captcha==0.3
-certifi==2019.3.9
-cffi==1.14.0
-chardet==3.0.4
 clarifai==2.6.2
 clyent==1.2.2
 colorama==0.4.1
