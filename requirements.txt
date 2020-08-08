@@ -1,0 +1,10 @@
+Flask_WTF==0.14.3
+selenium==3.141.0
+WTForms==2.2.1
+pandas==0.24.2
+Flask==1.0.2
+Flask_Script==2.0.6
+beautifulsoup4==4.9.1
+twilio==6.44.2
+webdriver_manager==3.2.1
+gunicorn
