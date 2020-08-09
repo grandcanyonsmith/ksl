@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flask-wtf = "==0.14.3"
+selenium = "==3.141.0"
+wtforms = "==2.2.1"
+pandas = "==0.24.2"
+flask = "==1.0.2"
+flask-script = "==2.0.6"
+beautifulsoup4 = "==4.9.1"
+twilio = "==6.44.2"
+webdriver-manager = "==3.2.1"
+gunicorn = "*"
+shell = "*"
+
+[requires]
+python_version = "3.7.5"
+
