@@ -13,7 +13,7 @@ def insert():
     if form.validate_on_submit():
 
         df = pd.read_csv('keywords.csv')
-        
+
         item_name = form.item_name.data
         minimum = form.minimum.data
         maximum = form.maximum.data
@@ -21,7 +21,7 @@ def insert():
         print(minimum)
         print(maximum)
         print("\nData received. Now redirecting ...")
-        
+
         found = df[df['Item'].str.contains(item_name)]
         isFound = found['Item'].count()
         print(isFound)
@@ -37,7 +37,7 @@ def insert():
             print ("Successfully inserted Item - ", item_name)
         else:
             print ("Duplicate Item")
-            
+
         return redirect(url_for('insert'))
     return render_template('item.html', form=form)
 
@@ -47,13 +47,13 @@ def delete():
     if form.validate_on_submit():
 
         df = pd.read_csv('keywords.csv')
-        
+
         item_name = form.remove_item_name.data
-        
+
         print(item_name)
-        
+
         print("\nData received. Now Searching for removal ...")
-        
+
         found = df[df['Item'].str.contains(item_name)]
         isFound = found['Item'].count()
         print(isFound)
@@ -67,7 +67,7 @@ def delete():
             print ("Successfully Deleted Item - ", item_name)
         else:
             print ("Not found")
-            
+
         return redirect(url_for('delete'))
 
     return render_template('item.html', form=form)
